@@ -13,11 +13,11 @@ open class TestController(
 
     @Get("/test")
     suspend fun test(): HttpResponse<Int> {
-        try {
+        return try {
             suspendService.suspendWithRecover()
-            throw IllegalStateException("Recover should not have happened during this request")
+            HttpResponse.ok(-1)
         } catch (ex: HttpStatusException) {
-            return HttpResponse.ok(suspendClient.tryCount.get())
+            HttpResponse.ok(suspendClient.tryCount.get())
         }
     }
 }
