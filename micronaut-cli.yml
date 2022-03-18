@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: micronaut.recovery.suspend
+testFramework: junit
+sourceLanguage: kotlin
+buildTool: gradle
+features: [app-name, gradle, http-client, jackson-databind, junit, kotlin, kotlin-application, kotlin-build, kotlin-extension-functions, logback, micronaut-aot, micronaut-build, netty-server, readme, shade, yaml]
